@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Divine CC</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js" defer></script>
+</head>
+
+<body>
+    <div class="grid">
+        <nav class="navbar sticky">
+            <img src="Logo.png" alt="Divine CC Logo" class="logo">
+            <div class="nav-links" id="nav-links">
+                <ul class="on">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">SERVICES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Gate Motors</a></li>
+                            <li><a href="#">Electrified Fence</a></li>
+                            <li><a href="#">CCTV Camera</a></li>
+                            <li><a href="#">Intercom Systems</a></li>
+                            <li><a href="#">Biometric Access Control</a></li>
+                            <li><a href="#">Garage Door Automation</a></li>
+                            <li><a href="#">Intruder Alarm System</a></li>
+                            <li><a href="#">Air Conditioner and Cooling</a></li>
+                            <li><a href="#">Time and Attendance</a></li>
+                            <li><a href="#">Clocking Systems</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <button class="logo contact-devine"><a href="contact.html">Contact Us</a></button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+
+        <section class="contact-info">
+            <section class="hero">
+                <div class="title">
+                    <h1>CONTACT US</h1>
+                </div>
+            </section>
+            <h1>Get in Touch</h1>
+            <p>If you have any questions or would like to learn more about our services, please don't hesitate to
+                contact
+                us.</p>
+            <p>Email: info@divinecc.com</p>
+            <p>Phone: 08166 776 666</p>
+            <p>Address: Your Company Address Here</p>
+            <img src="contact.jpg" alt="Contact Us">
+        </section>
+        <div class="contact">
+            <div class="form">
+                <h1>Contact</h1>
+                <div id="alertMessage" class="alert"></div> <!-- Add this div for the alert message -->
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" aria-label="Your Name/Edina loye" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" aria-label="Your Email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" aria-label="message/etumwa laka" required></textarea><br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        
+         <!-- Footer -->
+        <footer>
+            <div class="visit-us">
+                <h5>Visit us</h5>
+                <iframe
+    src="https://www.google.com/maps?q=Ongwediva,+Namibia&output=embed"
+    width="100%"
+    height="300"
+    style="border:0; border-radius: 10px; margin-top: 20px;"
+    allowfullscreen=""
+    loading="lazy"
+></iframe>
+
+            </div>
+            <p>&copy; 2024 Devine CC. All rights reserved.</p>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" aria-label="Scroll to top">Top</button>
+    </div>
+    <script src="menu.js"></script>
+</body>
+
+</html>

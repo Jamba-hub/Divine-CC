@@ -1,0 +1,603 @@
+/* Define client colors */
+:root {
+    --primary-color: rgba(0, 0, 0,1); /* Black */
+    --secondary-color: #1b96bb; /* blue */
+    --accent-color: rgba(102, 22, 22,1); /* red */ 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container and Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    background-color:rgb(138, 38, 158);
+}
+
+.navbar {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 20px;
+    height: 70px;
+}
+/* General Navigation Styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    z-index: 999;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 170px;
+}
+
+.nav-links .on {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links ul li a:hover {
+    color: var(--accent-color);
+}
+/* Basic styling for navbar */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #080808;
+}
+
+.navbar > li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar > li > a:hover {
+    background-color: #111;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu > li > a {
+    color: white; /* Fix visibility */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #8a5757;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+/* Sticky Navbar */
+.sticky {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgb(243, 243, 243);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Professional shadow effect */
+    color: #1b1515;
+    margin: 0 auto; /* Ensure it's centered */
+    border-radius: 15px;
+    max-width: 98%; /* Set to 100% to prevent overflow */
+    width: 100%;
+    background-size: cover; /* Make sure background covers the section */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Prevent any overflow */
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Ensure content is stacked */
+    align-items: center;
+}
+.hero .hero-title{
+    display: flex;
+}
+
+
+.mainImg{
+    width: 180px;
+}
+
+
+
+.hero .title h1 {
+    font-size: 60px;
+    color: #110f0f;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+.cta {
+    width: 900px;
+}
+
+.cta h3 {
+    font-size: 25px;
+    font-family: 'Arial', sans-serif;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #0e0d0d;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-right: 15px;
+    border-radius: 7px 0 7px 7px;
+}
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+button:hover {
+    background-color: #cc0000;
+}
+
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    color: #140f0f;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.why-choose-us h1, .why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.why-choose-us p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 1000px; /* This keeps it from stretching too far on large screens */
+    color: #0f0d0d;
+    margin: 0 auto; /* Ensure paragraph is centered */
+}
+
+.system-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box{
+    width: 100px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(security2.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5sd;
+}
+.img-box:nth-child(2){
+    background: url(security6.jpeg);
+    background-size: cover;
+    background-position: center;
+    }
+.img-box:nth-child(3){
+    background: url(security3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(4){
+    background: url(security7.jpeg);
+    background-size: cover;
+    background-position: center;
+    }
+.img-box:nth-child(5){
+    background: url(security4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box h3{
+    color: var(--accent-color);
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 0.5s,  opacity 0.5s;
+
+}   
+.img-box:hover{
+    width: 300px;
+    cursor: pointer;
+}
+.img-box:hover h3{
+    opacity:1;
+    bottom: 25px;
+}
+.system-images  img {
+    width: 100%;
+}
+
+
+.main-img:hover, .team-images img:hover {
+    transform: scale(1.05);
+}
+.why-choose-us .sub-images{
+    width: 500px;
+    height: auto;
+    margin: 10px 10px;
+    background-color: var(--primary-color); /* Background color for a cleaner division */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Professional shadow effect */
+}
+
+.why-choose-us .sub-images  {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distributes space between items */
+    gap: 20px; /* Adds space between the images */
+    margin-top: 4px; /* Add some spacing above the images */
+}
+
+.why-choose-us .sub-images img {
+    max-width: 100%; /* Make sure the images do not overflow */
+    width: 95%;
+    height: auto;
+    margin: 10px; 
+    display: block;
+    object-fit: contain; /* Ensure the images retain aspect ratio */
+}
+
+.why-choose-us  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #c28c85; /* Match the text color with your theme */
+    margin-top: 10px;
+}
+
+
+.system-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.system-images img {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sub-images img:hover, .system-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+footer a {
+    color: #5badce;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .hours, footer .visit-us {
+    margin-bottom: 20px;
+}
+
+footer img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    transition: filter 0.3s;
+}
+
+footer .social-media img:hover {
+    filter: invert(70%);
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+  
+#scrollToTopBtn {
+    background-color: var(--accent-color);
+}
+/* Responsive Design */
+
+
+@media (max-width: 1220px) {
+        .mainImg{
+            size: 1rem;
+            display: none;
+        }
+        .hero .hero-title .go{
+            size: 1rem;
+        }
+        
+        
+}
+
+
+@media (max-width: 768px) {
+    .navbar{
+        mix-blend-mode: unset;
+    }
+    .hamburger {
+        display: flex; /* Ensure it's visible */
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 10;
+        padding: 10px; /* Add some padding for better appearance */
+        border-radius: 5px; /* Optional, for rounded edges */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 10%;
+        border: 2px solid white;
+        right: -100%; /* Initially hide off-screen */
+        width: 100%; /* Menu takes half the screen */
+        height: 20%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease; /* Smooth slide-in effect */
+        z-index: 9;
+    }
+    .nav-links .on {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        border-bottom: 2px solid #4a9bbf;
+        margin: 20px 0;
+    }
+
+    .nav-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    .nav-links li:hover .dropdown {
+        display: block;
+      }
+      
+
+    /* When the menu is active, bring it on screen */
+    .nav-links.active {
+        right: 0;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background: #1ba3bb;
+        width: 220px;
+        padding: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        flex-direction: column; /* Stack items vertically */
+    }
+    
+    .dropdown-menu li {
+        display: block; /* Ensure each list item takes a full line */
+    }
+    
+    .dropdown-menu li a {
+        display: block; /* Ensure the anchor tags take up the full width of the parent */
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    
+    .dropdown-menu li a:hover {
+        background: #da6d6d;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero .hero-title{
+        display: block;
+    }
+   
+    .navbar .contact-devine{
+        display: none;
+    } 
+    
+    .hero .title h1 {
+        font-size: 60px;
+        color: #110f0f;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        margin: 10px 0;
+    }
+
+     
+    .hero .title h1 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem); /* responsive scaling */
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      .hero .title h3 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem); /* responsive scaling */
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
+        padding: 0 10px;
+      }
+    
+      .hero .title .h1h3 {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin: 9px;
+      }
+    .mainImg {
+        width: 150px;
+        max-width: 300px; /* Scale down with container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .main-img {
+        max-width: 100%; /* Scale down with container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .why-choose-us h1, 
+    .why-choose-us h2, 
+    .why-choose-us h3 {
+        font-size: 2rem;
+    }
+
+    .why-choose-us p {
+        font-size: 1.1rem;
+        width: 90%; /* Ensure the text does not take up the whole screen */
+    }
+    .why-choose-us .sub-images {
+        width: 100%; /* Ensure the images shrink on small screens */
+    }
+
+
+    footer {
+        padding: 20px 10px;
+    }
+    
+    footer img {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer img {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}

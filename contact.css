@@ -216,10 +216,11 @@ button:hover {
 }
 
 .contact-info img {
-    width: 100%;
+    width: 300px;
     height: auto;
     max-width: 600px;
     margin: 20px auto;
+    border-radius: 45px;
 }
 @keyframes slideIn {
     0% {
